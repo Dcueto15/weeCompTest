@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<div class="modal">
+  <div class="modal-content">
+    <h2>Título del Modal</h2>
+    <p>Nombre de la compañia</p>
+    <p>Nombre de contacto</p>
+    <p>prueba@weecompany.net</p>
+    <p>9894849849</p>
+    <button class="btn-aceptar" onclick="redirectToCurrentHTML()">Aceptar</button>
+  </div>
+
+  <script>
+    function redirectToCurrentHTML() {
+      var currentURL = window.location.href;
+      var currentHTML = currentURL.substring(0, currentURL.lastIndexOf("/") + 1) + "table.html";
+      window.location.href = currentHTML;
+    }
+  </script>
+</div>

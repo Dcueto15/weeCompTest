@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>WeeCompany</title>
+</head>
+
+<body>
+  <div id="content">
+    <div class="container" id="app">
+    </div>
+  </div>
+</body>
+
+<script>
+  var stepLocalStorage = localStorage.getItem('stepRegister');
+  var step = stepLocalStorage || 1;
+
+  if (step === 1) {
+    document.getElementById("app").innerHTML = '<iframe class="registerFrame" src="register.html" frameborder="0"></iframe>';
+  } else if (step === 2) {
+    document.getElementById("app").innerHTML = '<iframe class="registerFrame" src="table.html" frameborder="0"></iframe>';
+  }    
+</script>
+
+</html>

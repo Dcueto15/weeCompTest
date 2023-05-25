@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="row">
+
+    <div class="col-40">
+      <div class="section leftSide">
+        <h2>
+          <span class="green">Wee</span><span class="blue">Claims<sup><span
+                class="registeredSymbol">®</span></sup></span>
+        </h2>
+        <p class="subheading">For Insurance Companies</p>
+      </div>
+    </div>
+
+    <div class="col-60">
+      <div class="section rightSide">
+        <h3>Registro Persona</h3>
+        <form id="paso1Form">
+          <div class="form-field">
+            <input type="text" id="contact-company" name="contact-name" required placeholder="Nombre de la compañía"
+              maxlength="100" oninvalid="setCustomValidity('Por favor, ingresa el nombre de la persona de contacto')"
+              oninput="setCustomValidity('')">
+          </div>
+          <div class="form-field">
+            <input type="text" id="contact-name" name="contact-name" required
+              placeholder="Nombre de la persona de contacto" maxlength="100"
+              oninvalid="setCustomValidity('Por favor, ingresa el nombre de la persona de contacto')"
+              oninput="setCustomValidity('')">
+          </div>
+
+          <div class="form-field">
+            <input type="email" id="email" name="email" required placeholder="Correo electrónico" maxlength="100"
+              oninvalid="setCustomValidity('Por favor, ingresa un correo electrónico válido')"
+              oninput="setCustomValidity('')">
+          </div>
+
+          <div class="form-field">
+            <input type="number" id="phone" name="phone" required placeholder="Teléfono" maxlength="20"
+              oninvalid="setCustomValidity('Por favor, ingresa un número de teléfono válido')"
+              oninput="setCustomValidity('')">
+          </div>
+
+          <div class="form-field">
+            <input type="checkbox" id="privacy-checkbox" name="privacy-checkbox" required
+              oninvalid="setCustomValidity('Por favor, lee y acepta el aviso de privacidad/Términos y condiciones')"
+              oninput="setCustomValidity('')">
+            <label for="privacy-checkbox">
+              He leído y acepto el <a
+                href="https://www.weecompany.net/Aviso#:~:text=El%20Responsable%20puede%20recolectar%20datos,y%20s%C3%B3lo%20puede%20recabar%20datos"
+                target="_blank">aviso de privacidad/Términos y condiciones</a>.
+            </label>
+          </div>
+
+
+          <div class="form-button">
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="iframeModal" id="modalRegister">
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("paso1Form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        localStorage.setItem('modal', true);
+        document.getElementById("modalRegister").innerHTML = '<iframe class="modalFrame" src="modal.html" frameborder="0"></iframe>';
+      });
+    });
+
+    var phoneInput = document.getElementById("phone");
+
+    phoneInput.addEventListener("keydown", function (event) {
+      var key = event.key;
+      var keyCode = event.keyCode;
+      if (key === "-" || keyCode === 189 || key === "e" || keyCode === 69) {
+        event.preventDefault();
+      }
+    });
+
+  </script>
+</body>

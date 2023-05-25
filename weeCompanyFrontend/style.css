@@ -1,0 +1,365 @@
+:root {
+  --color-primario: #4697ca;
+  --color-secundario: #3db18c;
+}
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  box-sizing: border-box;
+  padding: 2vh;
+  height: 100vh;
+}
+
+.row {
+  display: flex;
+}
+
+h2 {
+  font-size: 7vw;
+}
+
+p {
+  font-size: 3vw;
+}
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+.section h2 {
+  text-align: center;
+  margin: 0%;
+}
+
+.section h2 .green {
+  font-weight: bold;
+  color: var(--color-secundario)
+}
+
+.section h2 .blue,
+.section h2 .registeredSymbol {
+  font-weight: lighter;
+  color: var(--color-primario);
+}
+
+.section h2 .registeredSymbol {
+  font-size: 1vw;
+}
+
+.subheading {
+  text-align: center;
+  width: 90%;
+  font-family: sans-serif;
+  color: var(--color-primario);
+  margin: 0 auto;
+}
+
+.section2 {
+  background-color: transparent;
+}
+
+.leftSide {
+  background-color: #f0f2fa;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 2vw;
+}
+
+.rightSide {
+  justify-content: start;
+  align-content: center;
+  margin-left: 1.5vw;
+  margin-right: 3vw;
+}
+
+.registerFrame {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.modalFrame {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media only screen and (max-width: 800px) {
+
+  .col-40,
+  .col-60 {
+    width: 100%;
+  }
+
+  .col-60 {
+    background-color: white;
+  }
+
+  .row {
+    flex-wrap: wrap;
+  }
+
+  .rowTable {
+    flex-wrap: nowrap;
+  }
+
+  .section {
+    max-height: 80vh;
+  }
+
+  .section h2 {
+    font-size: 15vw;
+  }
+
+  .section p {
+    font-size: 5.5vw;
+  }
+
+  .section .registeredSymbol {
+    font-size: 2vw !important;
+  }
+
+  .leftSide {
+    height: 20vh;
+    margin-right: 2vw;
+  }
+
+  form {
+    font-size: 3vw;
+  }
+
+  .form-field {
+    margin-bottom: 7vh;
+  }
+
+  .form-field input[type="text"],
+  .form-field input[type="email"],
+  .form-field input[type="number"],
+  .form-field input[type="checkbox"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    font-size: 4vw;
+  }
+
+  .form-field input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    margin-right: 5px;
+  }
+
+  .form-button {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  button[type="submit"] {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 10px 20vw;
+    border: none;
+    border-radius: 4px;
+    margin-top: 2vh;
+    cursor: pointer;
+    font-size: 3vw;
+  }
+
+  .section h3 {
+    color: var(--color-primario);
+    margin-bottom: 7vh;
+    font-size: 6vw;
+  }
+
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 9999;
+  }
+
+  .modal-content {
+    background-color: white;
+    width: 80vw;
+    padding: 20px;
+    border-radius: 2vw;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .modal-content h2 {
+    color: var(--color-secundario);
+    font-size: 6vw;
+  }
+
+  .modal-content p {
+    font-size: 4vw;
+  }
+
+  .modal-content .btn-aceptar {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 10px 5vw;
+    border: none;
+    border-radius: 1vw;
+    cursor: pointer;
+    font-size: 4vw;
+  }
+
+  table {
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (min-width: 801px) {
+  .col-40 {
+    width: 40vw;
+  }
+
+  .col-60 {
+    width: 60vw;
+    background-color: white;
+  }
+
+  form {
+    width: 100%;
+    font-size: 1.5vw;
+  }
+
+  .form-field {
+    margin-bottom: 5vh;
+  }
+
+  .form-field input[type="text"],
+  .form-field input[type="email"],
+  .form-field input[type="number"],
+  .form-field input[type="checkbox"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    font-size: 1.5vw;
+  }
+
+  .form-field input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    margin-right: 5px;
+  }
+
+  .form-button {
+    display: flex;
+    justify-content: center;
+  }
+
+  button[type="submit"] {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 10px 10vw;
+    border: none;
+    border-radius: 4px;
+    margin-top: 2vh;
+    cursor: pointer;
+    font-size: 1.5vw;
+  }
+  
+  .section h3 {
+    color: var(--color-primario);
+    margin-bottom: 7vh;
+    font-size: 4vw;
+  }
+
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 9999;
+  }
+
+  .modal-content {
+    background-color: white;
+    width: 50vw;
+    padding: 20px;
+    border-radius: 2vw;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .modal-content h2 {
+    color: var(--color-secundario);
+    font-size: 3vw;
+  }
+
+  .modal-content p {
+    font-size: 2vw;
+  }
+
+  .modal-content .btn-aceptar {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 10px 5vw;
+    border: none;
+    border-radius: 1vw;
+    cursor: pointer;
+    font-size: 2vw;
+  }
+
+  table {
+    font-size: 1.5vw;
+    width: 55vw;
+  }
+
+}
+
+.table-container {
+  height: 50vh;
+  width: 100%;
+  overflow-x: auto;
+}
+
+thead th {
+  border-bottom: 1px solid black;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
